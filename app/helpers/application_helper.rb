@@ -9,4 +9,7 @@ module ApplicationHelper
     end
   end
   
+  def date
+    Time.now()
+  end
 end
