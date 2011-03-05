@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe PageController do
-
+  render_views
+  
   before(:each) do
     @base_title = "Timeline"
   end
@@ -15,8 +16,15 @@ describe PageController do
     it "should have the right title" do
       get 'welcome'
       response.should have_selector("title",
-                                    :content => "#{@base_title} | #{@title}")
+                                    :content => "#{@base_title} | Welcome")
     end
+    
+    it "should have the right header" do
+      get "welcome"
+      response.should have_selector("h1",
+                                    :content => "Welcome!")
+    end
+    
   end
 
 end
