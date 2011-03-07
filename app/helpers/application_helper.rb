@@ -1,7 +1,7 @@
 module ApplicationHelper
   # Returns title of the webpage
   def title
-    base_title = "Timeline"
+    base_title = "Konnect"
     if @title.blank?
       base_title
     else
