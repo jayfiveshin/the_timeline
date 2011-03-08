@@ -1,0 +1,9 @@
+DESIGN IDEAS
+1. The "Free" Check Box
+The idea is, when you check off box for "Free", 
+"Price" field should disappear. 
+
+Obviously, when you uncheck the box for "Free",
+"Price" field should reappear.
+
+2. 

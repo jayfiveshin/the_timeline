@@ -1,0 +1,5 @@
+Question: What does rake db:reset do?
+Answer: ---
+
+Question: form_for helper method. What does it do?
+Answer: I think this is something that Rails does that takes in Ruby code and spits out HTML code. 
