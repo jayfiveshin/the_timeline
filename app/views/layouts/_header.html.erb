@@ -1,11 +1,20 @@
 <header>
-  <div id="counter" class="counter">
-    <span><div class="countdown_num" id="countdown_day"></div><div>days</div></span>
-    <span><div class="countdown_num" id="countdown_hour"></div><div>hours</div></span>
-    <span><div class="countdown_num" id="countdown_min"></div><div>minutes</div></span>
-    <span><div class="countdown_num" id="countdown_sec"></div><div>seconds</div></span>
-  </div>
-  <div id="expired" style="display:none">
-    Konnect High School Retreat 2011 is here!
-  </div>
+  <%= link_to logo, root_path %>
+  <nav class="round">
+    <ul>
+	  <li><%= link_to "Home", root_path %></li>
+	  <li><%= link_to "Events", events_path %></li>
+      <% if signed_in? %>
+	  <li><%= link_to "Users", users_path %></li>	
+      <li><%= link_to "Profile", current_user %></li>
+      <li><%= link_to "Setting", edit_user_path(current_user) %></li>
+      <% end %>
+	  <li><%= link_to "Help", help_path %></li>
+      <% if signed_in? %>
+      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+      <% else %>
+      <li><%= link_to "Sign in", signin_path %></li>
+      <% end %>
+    </ul>
+  </nav>
 </header>

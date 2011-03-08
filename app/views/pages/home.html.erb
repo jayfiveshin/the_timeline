@@ -1,0 +1,23 @@
+<% if signed_in? %>
+  <table class="front" summary="For signed-in users">
+  	<tr>
+  	  <td class="main">
+  	  	<!-- Whatever is in "if false ... end" is essentially the same as 
+  	  	commenting it out. -->
+        <% if false %>
+  	  	<h1 class="micropost">What's up?</h1>
+        <%= render 'shared/micropost_form' %>
+        <%= render 'shared/feed' %>
+        <% end %>
+        <h1 class="event">Create a new event!</h1>
+        <%= render 'shared/event_form' %>
+	  </td>
+	  <td class="sidebar round">
+	  	<%= render 'shared/user_info' %>
+		<%= render 'shared/stats' %>
+	  </td>
+  	</tr>
+  </table>
+<% else %>
+<%= render :partial => 'welcome' %>
+<% end %>

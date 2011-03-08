@@ -1,6 +1,26 @@
-TheTimeline::Application.routes.draw do
-  get "pages/welcome"
+SampleApp::Application.routes.draw do
+  resources :events #this is to be worked on later
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  resources :sessions,      :only => [:new, :create, :destroy]
+  resources :microposts,    :only => [:create, :destroy]
+  resources :relationships, :only => [:create, :destroy]
 
+  match '/signup',  :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  match '/contact', :to => 'pages#contact'
+  match '/about', :to => 'pages#about'
+  match '/help', :to => 'pages#help'
+  match '/bio', :to => 'pages#bio'
+  
+  match '/newevent', :to => 'events#new' #this is to be worked on later
+  
+  root :to => 'pages#home'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -50,7 +70,7 @@ TheTimeline::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "pages#welcome"
+  # root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 

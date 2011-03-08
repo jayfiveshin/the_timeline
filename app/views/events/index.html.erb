@@ -1,0 +1,11 @@
+<h1><%= @title %></h1>
+
+<% if signed_in? %>
+<%= will_paginate %>
+<ul class="events">
+  <%= render @events %>
+</ul>
+<%= will_paginate %>
+<% else %>
+<p>You need to sign in first.</p>
+<% end %>

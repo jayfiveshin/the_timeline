@@ -1,0 +1,50 @@
+<%= form_for @event, :remote => true do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :occur_type, "Type" %>
+    <%= f.select :occur_type, Event::OCCUR_TYPE %>
+  </div>
+  <div class="field">
+    <%= f.label :free %>
+    <%= f.check_box :free %>
+  </div>
+  <div class="field_price">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date_time, "Starts" %>
+    <%= f.calendar_date_select :start_date_time, 
+      :minute_interval => 15,
+      :month_year => "label",
+      :popup => "force",
+      :time => "mixed",
+      :valid_date_check => "date.stripTime() > (new Date()).stripTime()",
+      :default_time => Time.now %> <!-- Default time is not working -->
+  </div>
+  <div class="field">
+    <%= f.label :end_date_time, "Ends" %>
+    <%= f.calendar_date_select :end_date_time,
+      :minute_interval => 15,
+      :month_year => "label",
+      :popup => "force",
+      :time => "mixed",
+      :valid_date_check => "date.stripTime() > (new Date()).stripTime()",
+      :default_time => Time.now %> <!-- Default time is not working -->
+  </div>
+  <div class="field">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+  <div class="action">
+    <%= f.submit "Create event!" %>
+  </div>
+<% end %>

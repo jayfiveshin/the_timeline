@@ -1,15 +1,34 @@
 module ApplicationHelper
-  # Returns title of the webpage
+
+  # Return a title on a per-page basis.
   def title
-    base_title = "Konnect"
-    if @title.blank?
+    base_title = "Timeline"
+    if @title.nil?
       base_title
     else
       "#{base_title} | #{@title}"
     end
-  end
+  end #of title
   
-  def date
-    Time.now()
-  end
-end
+  def logo
+    image_tag("timeline_logo.jpg",  :alt => "Timeline", 
+                                    :class => "round",
+                                    :size => "252x74")
+  end #of logo
+  
+  # Returns "a" or "an", depending on the input.
+  # ex: a_or_an("apple") will return "an apple", whereas
+  #     a_or_an("child") will return "a child".
+  def a_or_an(word)
+    word = word.strip
+    if %w{a e i o u A E I O U}.include? word[0..0].to_s
+      "an #{word}"
+    else
+      "a #{word}"
+    end
+  end #of a_or_an
+  
+  OCCUR_TYPE = ['Annual', 'Biannual', 'Monthly',
+                'Bimonthly', 'Weekly', 'Biweekly']
+                
+end #of ApplicationHelper
