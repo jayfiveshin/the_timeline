@@ -11,6 +11,10 @@ gem 'will_paginate', '3.0.pre2'
 gem 'simple_form'
 gem 'calendar_date_select'
 
+group :production do
+	gem 'faker', '0.3.1'
+end
+
 group :development do
 	gem 'rspec-rails', '2.3.0'
 	gem 'annotate-models', '1.0.4'
