@@ -13,8 +13,22 @@ module ApplicationHelper
   def logo
     image_tag("timeline_logo.jpg",  :alt => "Timeline", 
                                     :class => "round",
-                                    :size => "252x74")
+                                    :size => "102x30")
   end #of logo
+  
+  def light 
+    image_tag("light.jpg",  :alt => "Light",
+                            :class  => "round",
+                            :id => "light",
+                            :size => "150x200",)
+  end
+  
+  def joonha 
+    image_tag("joonha.jpg", :alt => "Joonha",
+                            :class  => "round",
+                            :id => "joonha",
+                            :size => "150x196")
+  end
   
   # Returns "a" or "an", depending on the input.
   # ex: a_or_an("apple") will return "an apple", whereas

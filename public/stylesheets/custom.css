@@ -4,7 +4,7 @@
 
 body {
 	/*"Dark Orange"*/
-	background: #FF7F00;
+	background: url('/images/background.jpg');
 }
 
 header {
@@ -18,21 +18,29 @@ header img {
 
 section {
 	margin-top: 1em;
-	color: #191970; /* midnightblue */
+	color: #333333; /*gray20 - http://www.somacon.com/p142.php*/
 	font-size: 125%;
 	padding: 20px;
 	background: #fff;
 }
 
 section h1 {
-	font-size: 200%;
-	color: #191970;
+	font-size: 210%;
+	font-weight: 300;
+	letter-spacing: -0.5px;
+	color: #262626; /*gray15 - http://www.somacon.com/p142.php*/
+	margin-bottom: 20px;
 }
 
 section h2 {
 	font-size: 150%;
-	color: #191970;
+	color: #262626; /*gray15 - http://www.somacon.com/p142.php*/
 }
+
+b {
+	font-size: 105%;
+}
+
 /* Links */ 
 
 a {
@@ -74,7 +82,7 @@ nav ul li {
 
 nav ul li a {
 	padding: 0 5px;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 nav ul li a:visited {
@@ -282,4 +290,23 @@ form.new_micropost textarea {
 .simple_form div.input {
   margin-left: 5px;
   margin-bottom: 10px;
+}
+
+/*Profile Pictures*/
+
+.profile_pic {
+  height: 220px;
+  margin-top: 10px;
+/*  border-style: dotted;
+  border-width: 1px;*/
+}
+
+.profile_pic #light {
+  float: left;
+  margin-right: 10px;
+}
+
+.profile_pic #joonha {
+  float: right;
+  margin: 10px 10px 10px 10px;
 }

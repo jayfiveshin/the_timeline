@@ -15,7 +15,6 @@ SampleApp::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
-  match '/bio', :to => 'pages#bio'
   
   match '/newevent', :to => 'events#new' #this is to be worked on later
   
