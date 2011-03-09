@@ -41,8 +41,5 @@ module ApplicationHelper
       "a #{word}"
     end
   end #of a_or_an
-  
-  OCCUR_TYPE = ['Annual', 'Biannual', 'Monthly',
-                'Bimonthly', 'Weekly', 'Biweekly']
                 
 end #of ApplicationHelper
