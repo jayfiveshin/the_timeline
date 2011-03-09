@@ -21,26 +21,6 @@
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :start_date_time, "Starts" %>
-    <%= f.calendar_date_select :start_date_time, 
-      :minute_interval => 15,
-      :month_year => "label",
-      :popup => "force",
-      :time => "mixed",
-      :valid_date_check => "date.stripTime() > (new Date()).stripTime()",
-      :default_time => Time.now %> <!-- Default time is not working -->
-  </div>
-  <div class="field">
-    <%= f.label :end_date_time, "Ends" %>
-    <%= f.calendar_date_select :end_date_time,
-      :minute_interval => 15,
-      :month_year => "label",
-      :popup => "force",
-      :time => "mixed",
-      :valid_date_check => "date.stripTime() > (new Date()).stripTime()",
-      :default_time => Time.now %> <!-- Default time is not working -->
-  </div>
-  <div class="field">
     <%= f.label :content %>
     <%= f.text_area :content %>
   </div>
