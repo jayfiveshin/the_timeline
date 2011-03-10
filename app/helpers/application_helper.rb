@@ -2,7 +2,7 @@ module ApplicationHelper
 
   # Return a title on a per-page basis.
   def title
-    base_title = "Timeline"
+    base_title = "TimeLine"
     if @title.nil?
       base_title
     else
@@ -20,7 +20,7 @@ module ApplicationHelper
     image_tag("light.jpg",  :alt => "Light",
                             :class  => "round",
                             :id => "light",
-                            :size => "150x200",)
+                            :size => "150x200")
   end
   
   def joonha 
