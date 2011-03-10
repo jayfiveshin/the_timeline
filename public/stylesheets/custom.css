@@ -1,5 +1,5 @@
 .container {
-	width: 710px;
+	width: 750px;
 }
 
 body {
@@ -37,7 +37,7 @@ section h1 {
 
 section h2 {
 	font-size: 150%;
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 section h3 {
@@ -104,18 +104,23 @@ nav ul li a:hover {
 
 /* Sign up button */
 
-a.signup_button {
-  margin-left: auto; 
-  margin-right: auto;
+a.button {
   margin-bottom: 10px;
   display: block;
   text-align: center;
   width: 170px;
   color: #fff;
-  background: #FF6600; /* Orange */
   font-size: 150%;
   font-weight: bold;
   padding: 20px;
+}
+
+#about {
+  background: #FF9900; /* Yellow */
+}
+
+#signup {
+  background: #FF6600; /* Yellow */
 }
 
 /* Round corners */
@@ -130,7 +135,7 @@ a.signup_button {
 footer {
 	text-align: center; 
 	margin-top: 10px;
-	width: 710px; 
+	width: 750px; 
 	margin-left: auto;
 	margin-right: auto; 
 }
@@ -315,4 +320,45 @@ div.profile_container {
   text-align: normal;
   font-style: italic;
 /*  border: 2px solid gray;*/
+}
+
+/*Contact Map*/
+
+div.map_container {
+  width: 100%;
+  height: 290px;
+/*  border: 2px dotted gray;*/
+}
+
+.map_container #map {
+  margin-top: 16px;
+  margin-right: 20px;
+  width: 450px;
+  float: right;
+/*  border: 1px dotted gray;*/
+}
+
+.map_container #address, #email {
+/*  float: right;*/
+/*  margin-top: 16px;*/
+/*  margin-left: 13px;*/
+  padding: 10px 10px 10px 10px;
+  width: 150px;
+  min-height: 0px;
+/*  border: 1px dotted gray;*/
+}
+
+div.wrapper {
+  height: 80px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+/*  border: 2px solid gray;*/
+}
+
+div.inner_wrapper div.left {
+  float: left;
+}
+div.inner_wrapper div.right {
+  float: right;
 }
